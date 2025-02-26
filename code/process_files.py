@@ -45,5 +45,4 @@ if file:
     for s in st.session_state.summaries:
         st.info(s, icon="💾")
     st.success(f"{st.session_state.total_files} files processed, {st.session_state.total_lines} total lines processed")
-    
 
