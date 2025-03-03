@@ -23,4 +23,4 @@ Examples:
 
 `--- Reflection Below This Line ---`
 
-Reflection needs to be completed.
+Streamlit made me enjoy coding more because now I can just code and keep mashing the refresh button till I figure out how to code without the errors! This was my favorite HW assignment so far.
