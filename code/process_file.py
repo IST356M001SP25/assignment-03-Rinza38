@@ -20,11 +20,12 @@ if file:
     text = StringIO(file.getvalue().decode("utf-8")).read()
     for line in text.split("\n"):
         line = line.strip()
-        package = packaging.parse_packaging(line)
-        total = packaging.calc_total_units(package)
-        unit = packaging.get_unit(package)
-        packages.append(package)
-        st.info(f"{line} ➡️ Total 📦 Size: {total} {unit}")
+        if line:  # Only process non-empty lines
+            package = packaging.parse_packaging(line)
+            total = packaging.calc_total_units(package)
+            unit = packaging.get_unit(package)
+            packages.append(package)
+            st.info(f"{line} ➡️ Total 📦 Size: {total} {unit}")
     count = len(packages)
     with open(f"./data/{json_filename}", "w") as f:
         json.dump(packages, f, indent=4)
